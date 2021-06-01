@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <title>Verify Work</title>
+  </head>
+  <body>
+   <div class="container">
+    <div class="py-5 text-center bg-secondary text-white">
+     <h1 class="mb-3">Verify Work</h1>
+
+     <table>
+     	<tr>
+     		<td>
+     <div class="row">
+     	{% for x in cluster %}
+     		<div class="col-sm-4">
+		       <div class="card m-2">
+		       	<a href="{% url 'home_url_id' x.cluster%}">{{x.cluster}}</a>
+		         
+		         {{x.frequency}}
+		         {{x.image_hash}}
+		         
+		       </div>
+		     </div>
+		{% endfor %}
+    </div>
+    </td>
+    <td>
+    <div class="row">
+     {% for x in lonlat %}
+      <div class="col-sm-4">
+       <div class="card m-2">
+        
+		         {{x}}
+        
+       </div>
+      </div>
+     {% endfor %}
+ 	</div>
+ 	</td>
+ 	</tr>
+ 	</table>
+    </div>
+   </div>
+    <a href="{% url 'dashboard'%}">Home</a>
+  </body>
+</html>
