@@ -26,3 +26,6 @@ docker exec -it bdca2b8c09b7 psql -U postgres stripe-example
 
 LINUX
 sudo docker run -p 5432:5432 --name=roadMakerContainer -d -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=roadmakerDB -e PGDATA=postgres -v /home/dominic/Desktop/s8/group\ 6/login/pgdata:/postgres -i ps_image_with_data
+
+sudo docker tag dominicksavio/roadmaker:v1 dominicksavio/roadmakerpostgres:v1
+sudo docker push dominicksavio/roadmakerpostgres:v1
